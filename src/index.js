@@ -1,18 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './style.less';
-import { Button, WhiteSpace, WingBlank } from 'antd-mobile';
+import React, {Component} from "react";
+import "./style.less";
+import {Button, WhiteSpace} from "antd-mobile";
 
-function App() {
+class Index extends Component {
+  constructor(props) {
+    super(props);
+    console.log(this)
+  }
+
+  render() {
     return (
-        <div>
-            <h1>AntDesign Dem22222222222222222222222221</h1>
-            <hr /><br />
-            <div className="set-rem">哈哈哈</div>
-            <Button>default</Button><WhiteSpace />
+      <div>
+        <h1>layout,index</h1>
+        <hr />
+        <br />
+        <div className="set-rem">哈哈哈</div>
+        <Button>default</Button><WhiteSpace />
 
-        </div>
+      </div>
     );
+  }
 }
+export default Index;
 
-ReactDOM.render(<App />, document.getElementById('root'));
