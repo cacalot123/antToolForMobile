@@ -17,11 +17,10 @@ const px2remOpts = {
 module.exports = function (webpackConfig) {
   webpackConfig.babel.plugins.push('transform-runtime');
   webpackConfig.babel.plugins.push(['import', {
-    libraryName: 'antd',
-    style: true,
+    libraryName: 'antd-mobile',
+    style: true
   }]);
-  webpackConfig.postcss.push(px2rem(px2remOpts));
-  webpackConfig.module.loaders.push({test: /\.html$/, loader: 'file?name=[name].[ext]'})
 
+  webpackConfig.postcss.push(px2rem(px2remOpts));
   return webpackConfig;
 };

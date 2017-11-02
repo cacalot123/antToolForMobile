@@ -1,14 +1,16 @@
-
+@baseFont: 24px;
 html, body, #root {
   height: 100%;
 }
 
-body {
-  font-size: 36px
+.index {
+  font-size: @baseFont;
+  .set-rem {
+    background: #cccccc;
+    height: 75px;
+    width: 750px;
+    line-height: 75px;
+  }
 }
 
-.set-rem {
-  background: #cccccc;
-  height: 75px;
-  width: 750px
-}
+

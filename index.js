@@ -1,23 +1,31 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import {HashRouter, Route} from "react-keeper";
-import Layout1 from "./src/index";
-import NotFound from "./src/NotFound";
-import {Button, WhiteSpace} from "antd-mobile";
-import "./index.less";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {HashRouter, Route} from 'react-keeper';
+import Layout1 from './src/index';
+import NotFound from './src/NotFound';
+import App from './src/Products/app';
+import './index.less';
 
 
 const hostUser = {id: 'ASDFSDFG', name: '马化腾'};
+const Products = () => {
+  return (
+    <div>
+      <Route component={App} path="/app"/>
+    </div>
+  )
+}
+
 
 class Main extends React.Component {
   render() {
     return (
       <HashRouter>
         <div>
-          <Route path="/app" component={App}/>
-          <Route hostUser={ hostUser } index path="/index/(:id)" component={Layout1}/>
+          <Route path="/Products" component={Products}/>
+          <Route hostUser={hostUser} index path="/index(/:id)" component={Layout1}/>
           <Route path="/back" component={Layout1}/>
-          <Route miss component={ NotFound }/>
+          <Route miss component={NotFound}/>
         </div>
       </HashRouter>
     );
@@ -25,16 +33,4 @@ class Main extends React.Component {
 }
 
 
-function App() {
-  console.log(this);
-  return (
-    <div>
-      <h1>App</h1>
-      <div className="set-rem">rem</div>
-      <Button>default</Button><WhiteSpace />
-
-    </div>
-  );
-}
-
-ReactDOM.render(<Main />, document.getElementById('root'));
+ReactDOM.render(<Main/>, document.getElementById('root'));
