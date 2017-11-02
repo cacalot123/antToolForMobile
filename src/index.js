@@ -1,11 +1,11 @@
-import React, {Component} from "react";
-import "./style.less";
-import {Button, WhiteSpace} from "antd-mobile";
+import React, { Component } from 'react';
+import { Button, WhiteSpace } from 'antd-mobile';
+import './style.less';
 
 class Index extends Component {
   constructor(props) {
     super(props);
-    console.log(this)
+    console.log(this);
   }
 
   render() {
@@ -16,10 +16,10 @@ class Index extends Component {
         <br />
         <div className="set-rem">哈哈哈</div>
         <Button>default</Button><WhiteSpace />
-
       </div>
     );
   }
 }
+
 export default Index;
 

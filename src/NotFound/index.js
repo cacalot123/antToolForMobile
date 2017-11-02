@@ -1,15 +1,14 @@
-import React, {Component} from "react";
+import React, { Component } from 'react';
 
 class NotFound extends Component {
   constructor(props) {
     super(props);
-    console.log(this)
+    console.log(this);
   }
-  render(){
+  render() {
     return (<div className="NotFound">
       404
-    </div>)
+            </div>);
   }
-
 }
 export default NotFound;
